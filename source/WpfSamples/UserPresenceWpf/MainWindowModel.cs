@@ -191,14 +191,16 @@ SendKeys.SendWait("k");
                             Console.WriteLine("Current Transform ({0:0.0}, {1:0}, {2:0})", magLevel, xOffset, yOffset);
                             if (_capturedOnClosed.X < _screenWidth/2)
                             {
+                                // MAGNIFY.exe open
                                 // move left ctrl alt left key
                                 //https://msdn.microsoft.com/en-us/library/ms171548(v=vs.110).aspx
                                 //SendKeys.SendWait("{ENTER}");
-                                System.Windows.Forms.Sendkeys.Sendwait("<Message>");
+                                System.Windows.Forms.SendKeys.Send("^%{LEFT}"); // ctrl alt left
                                 Console.WriteLine("move left");
                             } else
                             {
                                 Console.WriteLine("move right");
+                                System.Windows.Forms.SendKeys.Send("^%{RIGHT}"); // ctrl alt left
                                 // move right
 
                             }
